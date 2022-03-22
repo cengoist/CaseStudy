@@ -18,7 +18,7 @@ const Post = (props) => {
       onPress={goToPostPage}
       style={[styles.container, {width: width - 60}]}>
       <View style={styles.innerContainer}>
-        <Image style={styles.image} source={post.image} />
+        <Image style={styles.image} source={post.avatar} />
 
         <View style={{flex: 1, marginHorizontal: 10}}>
           <View style={{flexDirection: 'row'}}>
@@ -27,10 +27,10 @@ const Post = (props) => {
             </Text>
           </View>
           <Text style={styles.description} numberOfLines={2}>
-            {post.type}. {post.title}
+            {post.job}
           </Text>
           <Text style={styles.prices}>
-            <Text style={styles.price}>₺{post.newPrice} </Text>/ gece
+            <Text style={styles.price}> {post.job}</Text>
           </Text>
         </View>
       </View>
