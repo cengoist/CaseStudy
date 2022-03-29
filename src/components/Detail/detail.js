@@ -1,37 +1,33 @@
 import React from 'react';
-import {View, Text, useWindowDimensions, Pressable} from 'react-native';
+import {View, Text, Image} from 'react-native';
 import styles from '../HomePage/styles';
-import {useNavigation} from '@react-navigation/native';
-
-const Post = () => {
-  const width = useWindowDimensions().width;
-
-  const navigation = useNavigation();
-
-  const goToPostPage = () => {
-    navigation.navigate('PostScreen');
-  };
+import DetailHeader from './detailHeader';
+const Post = props => {
+  const post = props.route.params.data;
 
   return (
-    <Pressable
-      onPress={goToPostPage}
-      style={[styles.container, {width: width - 60}]}>
-      <View style={styles.innerContainer}>
-        <View style={{flex: 1, marginHorizontal: 10}}>
-          <View style={{flexDirection: 'row'}}>
-            <Text style={styles.bedrooms}>
-              abc
-            </Text>
+    <View style={styles.innerContainer}>
+      <View style={{flex: 1}}>
+        <DetailHeader />
+        <View style={{flex: 1, padding: 8}}>
+          <View
+            style={{marginLeft: 'auto', marginRight: 'auto', marginTop: 15}}>
+            <Image
+              style={styles.image}
+              resizeMode={'stretch'}
+              source={{
+                uri: post.avatar,
+              }}
+            />
           </View>
-          <Text style={styles.description} numberOfLines={2}>
-            abc
-          </Text>
-          <Text style={styles.prices}>
-            <Text style={styles.price}>₺</Text>/ gece
-          </Text>
+          <View style={{flexDirection: 'column'}}>
+            <Text style={styles.price}>{post.name}</Text>
+            <Text style={styles.bedrooms}>{post.job}</Text>
+          </View>
+          <Text style={styles.description}>{post.description}</Text>
         </View>
       </View>
-    </Pressable>
+    </View>
   );
 };
 

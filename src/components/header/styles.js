@@ -19,11 +19,14 @@ const styles = StyleSheet.create({
     }),
   },
   headerText: {
-    marginTop: 'auto',
-    marginBottom: '15%',
     color: '#fff',
     fontSize: RFPercentage(2.7),
     fontWeight: 'bold',
+    marginTop: 'auto'
   },
+  addImage: {
+    width: 30,
+    height: 30,
+  }
 });
 export default styles;

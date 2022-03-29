@@ -1,32 +1,33 @@
-import {StyleSheet} from 'react-native';
+import {StyleSheet, Platform} from 'react-native';
+import {ifIphoneX} from 'react-native-iphone-x-helper';
 import {RFPercentage} from 'react-native-responsive-fontsize';
 const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-  },
-  Indicator: {
-    flex: 1,
-    justifyContent: "center"
-  },
-  horizontal: {
-    flexDirection: "row",
-    justifyContent: "space-around",
-    padding: 10
-  },
-  mapx: {
-    //position: 'absolute',
-    //bottom: 10,
-    flex: 1,
-    paddingVertical: 10,
-  },
-  innerContainer: {
+  header: {
+    backgroundColor: '#1C9BEF',
     flexDirection: 'row',
-    backgroundColor: 'white',
-    borderRadius: 10,
-    flex: 1
-    //overflow: 'hidden',
+    width: '100%',
+    ...Platform.select({
+      ios: {
+        height: '11%',
+      },
+      android: {
+        height: '10%',
+      },
+    }),
+    ...ifIphoneX({
+      paddingTop: 15,
+    }),
   },
-
+  headerText: {
+    color: '#fff',
+    fontSize: RFPercentage(2.7),
+    fontWeight: 'bold',
+    marginTop: 'auto'
+  },
+  addImage: {
+    width: 30,
+    height: 30,
+  },
   image: {
     height: 205.444,
     width: 115,
@@ -34,14 +35,6 @@ const styles = StyleSheet.create({
     resizeMode: 'cover',
     borderTopLeftRadius: 8,
     borderBottomLeftRadius: 8,
-  },
-
-  headerText: {
-    textAlign: 'center',
-    marginTop: 'auto',
-    color: 'white',
-    fontSize: RFPercentage(2.5),
-    fontWeight: 'bold',
   },
   description: {
     fontSize: RFPercentage(2),
