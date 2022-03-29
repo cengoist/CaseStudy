@@ -9,9 +9,13 @@ export const getSimpsons = () => dispatch => {
     .then(data => dispatch({type: 'GET_SIMPSONS_SUCCESS', payload: data}))
     .catch(error => dispatch({type: 'GET_SIMPSONS_ERROR', payload: error}));
 };
-export const AddCharacters = (name, description, avatar,job, id) => ({
+export const AddCharacters = (name, description, avatar, job, id) => ({
   type: ADD,
-  payload: name, description, avatar,job,id
+  payload: name,
+  description,
+  avatar,
+  job,
+  id,
 });
 export const removeCharacters = id => ({
   type: REMOVE,

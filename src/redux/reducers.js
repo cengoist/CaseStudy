@@ -4,9 +4,15 @@ import {REMOVE} from './actions';
 const initialState = {
   isLoading: false,
   name: '',
+  id: '',
+  avatar: '',
+  description: '',
   simpsons: [
     {
       id: '',
+      name: '',
+      avatar: '',
+      description: '',
     },
   ],
   message: '',

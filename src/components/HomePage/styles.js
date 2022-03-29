@@ -6,12 +6,12 @@ const styles = StyleSheet.create({
   },
   Indicator: {
     flex: 1,
-    justifyContent: "center"
+    justifyContent: 'center',
   },
   horizontal: {
-    flexDirection: "row",
-    justifyContent: "space-around",
-    padding: 10
+    flexDirection: 'row',
+    justifyContent: 'space-around',
+    padding: 10,
   },
   mapx: {
     //position: 'absolute',
@@ -23,7 +23,7 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     backgroundColor: 'white',
     borderRadius: 10,
-    flex: 1
+    flex: 1,
     //overflow: 'hidden',
   },
 
@@ -47,7 +47,7 @@ const styles = StyleSheet.create({
     fontSize: RFPercentage(2),
     lineHeight: 24,
     textAlign: 'center',
-    marginTop: '5%'
+    marginTop: '5%',
   },
   prices: {
     fontSize: 15,
@@ -63,7 +63,7 @@ const styles = StyleSheet.create({
     marginLeft: 'auto',
     marginRight: 'auto',
     fontWeight: 'bold',
-    fontSize:RFPercentage(3)
+    fontSize: RFPercentage(3),
   },
   totalPrice: {
     color: '#5b5b5b',
@@ -85,7 +85,7 @@ const styles = StyleSheet.create({
     marginLeft: 'auto',
     marginRight: 'auto',
     marginTop: 'auto',
-    fontSize: RFPercentage(1.9)
+    fontSize: RFPercentage(1.9),
   },
   trash: {
     flexDirection: 'row',
@@ -115,6 +115,6 @@ const styles = StyleSheet.create({
     marginTop: 'auto',
     marginBottom: 'auto',
     flex: 1,
-  }
+  },
 });
 export default styles;
